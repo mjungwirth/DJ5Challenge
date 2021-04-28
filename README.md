@@ -20,5 +20,7 @@ Now copy the .resc file from this repo to the Renode\scripts folder.  Edit that 
 Start Renode from the command line: "renode dojofile.resc".  One is the controller window and the other simulated Uart0.  Enter "start" to
 begin the simulation.  The Uart0 window will output 2 lines and echo characters typed on the keyboard until 'q' is entered.
 
+A screenshot of my results is in the repo for comarison.
+
 QED
 

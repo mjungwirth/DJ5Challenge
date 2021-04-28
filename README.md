@@ -4,7 +4,7 @@ My inital thought was to pursue option 4 and produce a Rust Hello World program.
 numerous packages, the cross-compiling command "cargo build --target thumbv7m-none-eabi" failed.  It complained that "FLASH" in memory.x was already defined.
 But removing that definition resulted in a message that FLASH was not defined.  Time for Plan B.
 
-To reproduce my results you will need to install Renode (https://github.com/renode/renode) and the Nordic nRF52 SDK, and the Seggeer SES IDE.
+To reproduce my results you will need to install Renode (https://github.com/renode/renode), the Nordic nRF52 SDK, and the Seggeer SES IDE.
 
 Renode has emulation capabilities for
 the nRF52840 device from Nordic.  The Nordic SDK has a file in the examples folder ...\nRF5_SDK_17.0.2\examples\peripheral\uart\main.c.  This example

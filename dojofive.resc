@@ -1,0 +1,18 @@
+:name: DoJoFive
+:description: This script runs UART on nRF52840 DK.
+
+using sysbus
+
+mach create
+machine LoadPlatformDescription @platforms/cpus/nrf52840.repl
+
+: $bin?=@https://dl.antmicro.com/projects/renode/renode-nrf52840-zephyr_shell_module.elf-gf8d05cf-s_1310072-c00fbffd6b65c6238877c4fe52e8228c2a38bf1f
+$bin?=@C:/Users/mjjun/Dev/DojoFive/nRF5_SDK_17.0.2/examples/peripheral/uart/pca10056/blank/ses/Output/Release/Exe/uart_pca10056.elf
+
+showAnalyzer uart0
+
+macro reset
+"""
+    sysbus LoadELF $bin
+"""
+runMacro $reset
